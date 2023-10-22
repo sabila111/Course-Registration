@@ -5,7 +5,7 @@ const CreditHour = ({addCredit}) => {
     return (
         <div>
             <div className="px-4 py-5 w-56 rounded-lg bg-base-100 ml-5 shadow-xl">
-             <h2 className="my-3 card-title text-start">Credit Hour Remaining: {addCredit.length} </h2>
+             <h2 className="my-3 card-title text-start text-blue-800 font-bold">Credit Hour Remaining: {addCredit.length} </h2>
         <div className=" items-center text-center">
          
           <div className='border border-solid border-slate-300'></div>
