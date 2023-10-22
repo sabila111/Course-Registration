@@ -1,18 +1,27 @@
 
 
-const Credit = ({ credits }) => {
-    const { name, image } = credits
+const Credit = ({ credits, handleClick }) => {
+
+   
+
+    const { name, image, details, price, credit,  } = credits
     return (
-        <div className="card w-80  bg-base-100 shadow-xl">
-            <figure><img src={image} alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">{name}</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
+        <div className="px-4 py-5 w-80 rounded-lg bg-base-100 shadow-xl mt-5">
+  <figure className=" py-5">
+    <img src={image} alt="Shoes" className="rounded-lg h-36 w-72" />
+  </figure>
+  <div className=" items-center text-center">
+    <h2 className="card-title py-3">{name}</h2>
+    <p className="text-slate-500">{details}</p>
+    <div className=" flex justify-between gap-5 py-3">
+        <p>Price: {price}</p>
+        <p>Credit: {credit}</p>
+    </div>
+    <div className=" w-full">
+      <button onClick={() => handleClick(credits)} className="w-full bg-blue-800 px-4 py-3 rounded-lg text-white font-bold">Buy Now</button>
+    </div>
+  </div>
+</div>
     );
 };
 

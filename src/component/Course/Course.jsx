@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Credit from '../credit/Credit';
 
 
-const Course = () => {
+const Course = ({handleClick}) => {
 
-const [credit, setCredit] = useState([]);
+const [cridit, setCredit] = useState([]);
 
 useEffect(() => {
     fetch('./fake.json')
@@ -13,11 +13,15 @@ useEffect(() => {
 },[])
 
     return (
-        <div className='grid grid-cols-3 gap-5'>
+    
+       
+         <div className='grid grid-cols-3 gap-10'>
+            
             {
-                credit.map(credits =><Credit key={credit} credits={credits}></Credit> )
+                cridit.map(credits =><Credit key={credits.id} credits={credits} handleClick={handleClick}></Credit> )
             }
         </div>
+
     );
 };
 

@@ -33,8 +33,8 @@
     },
     {
         "id": 5,
-        "image": "https://example.com/product5.jpg",
-        "name": "https://i.ibb.co/51mdjqT/Rectangle-2.png",
+        "image": "https://i.ibb.co/51mdjqT/Rectangle-2.png",
+        "name": "Introduction to OOP Python",
         "price": 19000,
         "credit": "5 hr",
         "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
