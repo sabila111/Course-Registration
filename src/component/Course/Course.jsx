@@ -15,7 +15,7 @@ useEffect(() => {
     return (
     
        
-         <div className='grid grid-cols-3 gap-10'>
+         <div className='grid grid-cols-3 gap-12'>
             
             {
                 cridit.map(credits =><Credit key={credits.id} credits={credits} handleClick={handleClick}></Credit> )

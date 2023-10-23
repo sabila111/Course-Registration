@@ -10,8 +10,15 @@ function App() {
    const[addCredit, setAddCredit] = useState([])
 
   const handleClick= credits=>{
-    const newAdd= [...addCredit, credits]
-    setAddCredit(newAdd)
+    
+    const isExit = addCredit.find((item) => item.id == credits.id)
+     if(isExit){
+      return alert('already added')
+     }
+     else{
+      setAddCredit([...addCredit, credits])
+     }
+   
   }
   // console.log(setAddCredit)
 
