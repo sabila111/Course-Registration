@@ -3,6 +3,8 @@ import { useState } from 'react'
 import './App.css'
 import Course from './component/Course/Course'
 import CreditHour from './component/creditHour/CreditHour'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
     
     const isExit = addCredit.find((item) => item.id == credits.id)
      if(isExit){
-      return alert('already added')
+      return toast('Already Added This Course')
      }
      else{
       setAddCredit([...addCredit, credits])
@@ -35,6 +37,7 @@ function App() {
       </div>
          
        </div>
+       <ToastContainer></ToastContainer>
    </div>
   )
 }
