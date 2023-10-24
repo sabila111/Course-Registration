@@ -25,9 +25,18 @@ function App() {
         count = count + item.credit
       })
       const totalRemaining = 20- count
+     
+
+     if(total > 16){
+      toast("Can't add more then 20 credit")
+     }
+     else{
       setTotal(count)
-     setRemaining(totalRemaining)
+      setRemaining(totalRemaining)
       setAddCredit([...addCredit, credits])
+     }
+
+     
      }
    
   }
