@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CreditHour = ({addCredit}) => {
+const CreditHour = ({addCredit,remaining,total}) => {
     console.log(addCredit)
     return (
         <div>
             <div className="px-4  w-56 rounded-lg bg-base-100 ml-5 shadow-xl">
-             <h2 className="my-3 card-title text-start text-blue-800 font-bold">Credit Hour Remaining: {addCredit.length} </h2>
+             <h2 className="my-3 card-title text-start text-blue-800 font-bold">Credit Hour Remaining:{remaining} hr</h2>
         <div className=" items-center text-center">
          
           <div className='border border-solid border-slate-300'></div>
@@ -16,7 +16,7 @@ const CreditHour = ({addCredit}) => {
             addCredit.map((add) =>(      
             <>
             <ul>
-            <li className='text-slate-500'>{add.id}. {add.name}</li>
+            <li className='text-slate-500' key={add.id}> {add.id}. {add.name}</li>
             </ul>
             </>
             ))
@@ -24,7 +24,7 @@ const CreditHour = ({addCredit}) => {
           
           </div>
           <div className='border border-solid border-slate-300'></div>
-         <p className='my-3'>Total Credit Hour: {}</p>
+         <p className='mt-3 pb-5 text-start font-bold'>Total Credit Hour:{total}</p>
         </div>
       </div>
         </div>

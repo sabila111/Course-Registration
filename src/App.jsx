@@ -10,14 +10,23 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
  
    const[addCredit, setAddCredit] = useState([])
+   const [total, setTotal] = useState(0)
+   const [remaining, setRemaining]= useState(0)
 
   const handleClick= credits=>{
-    
+
     const isExit = addCredit.find((item) => item.id == credits.id)
+    let count =credits.credit
      if(isExit){
       return toast('Already Added This Course')
      }
      else{
+      addCredit.forEach((item)=> {
+        count = count + item.credit
+      })
+      const totalRemaining = 20- count
+      setTotal(count)
+     setRemaining(totalRemaining)
       setAddCredit([...addCredit, credits])
      }
    
@@ -33,7 +42,7 @@ function App() {
       <Course handleClick={handleClick}></Course>
       </div>
       <div>
-      <CreditHour addCredit={addCredit}></CreditHour>
+      <CreditHour addCredit={addCredit} remaining={remaining} total={total}></CreditHour>
       </div>
          
        </div>

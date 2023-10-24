@@ -15,7 +15,7 @@ const Credit = ({ credits, handleClick }) => {
     <p className="text-slate-500">{details}</p>
     <div className=" flex justify-between gap-5 py-3">
         <p>Price: {price}</p>
-        <p>Credit: {credit}</p>
+        <p>Credit: {credit}hr</p>
     </div>
     <div className=" w-full">
       <button onClick={() => handleClick(credits)} className="w-full bg-blue-800 px-4 py-3 rounded-lg text-white font-bold">Buy Now</button>
