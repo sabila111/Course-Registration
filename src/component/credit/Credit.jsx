@@ -18,7 +18,7 @@ const Credit = ({ credits, handleClick }) => {
         <p>Credit: {credit}hr</p>
     </div>
     <div className=" w-full">
-      <button onClick={() => handleClick(credits)} className="w-full bg-blue-800 px-4 py-3 rounded-lg text-white font-bold">Buy Now</button>
+      <button onClick={() => handleClick(credits)} className="w-full bg-blue-800 px-4 py-3 rounded-lg text-white font-bold">Select</button>
     </div>
   </div>
 </div>
